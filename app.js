@@ -1,5 +1,3 @@
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica 
-// de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
 /* inicialización de variables */
 let amigos = [];
@@ -25,3 +23,18 @@ btnAgregar.addEventListener("click", function() {
 
     inputNombre.value = "";
 });
+
+/* función para asignar amigos secretos */
+function asignarAmigosSecretos(amigos) {
+    const ulLista = document.getElementById("lista");
+
+    ulLista.innerHTML = ""; // Limpiar la lista antes de asignar
+
+    for (let i = 0; i < amigos.length; i++) {
+        const li = document.createElement("li");
+        li.textContent = amigos[i];
+
+        ulLista.appendChild(li);
+    }
+}
+
