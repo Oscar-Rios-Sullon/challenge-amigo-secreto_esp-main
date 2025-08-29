@@ -1,6 +1,6 @@
 
 /* inicialización de variables */
-let amigos = [];
+let amigos = [Ana, Beto, Carla, Diego, Elena];
 
 const inputNombre = document.getElementById("input-nombre");
 const btnAgregar = document.getElementById("btn-agregar");
@@ -36,5 +36,17 @@ function asignarAmigosSecretos(amigos) {
 
         ulLista.appendChild(li);
     }
+}
+
+/* funcion para sortear los amigos */
+function sortearAmigo () {
+    if (amigos.length === 0) {
+        alert("No hay amigos en la lista para sortear.");
+        return;
+    }
+    const indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    const amigoSorteado = amigos[indiceAleatorio];
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = `Tu amigo secreto es: <strong>${amigoSorteado}</strong>`;
 }
 
