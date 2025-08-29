@@ -3,7 +3,7 @@
 let amigos = ["Ana", "Beto", "Carla", "Diego", "Elena"];
 
 /* función para agregar un amigo a la lista */
-function agregarAmigo(nombre) {
+function agregarAmigo() {
     const input = document.getElementById("amigo");
     const nombre = input.value.trim();
     if (nombre === "") {
@@ -12,24 +12,20 @@ function agregarAmigo(nombre) {
     }
 
     amigos.push(nombre);
-    const nuevoElemento = document.createElement("li");
-    nuevoElemento.textContent = nombre;
-    ulLista.appendChild(nuevoElemento);
-
-    inputNombre.value = "";
+    mostrarListaDeAmigos();
+    input.value = "";
 }
 
 /* función para asignar amigos secretos */
-function asignarAmigosSecretos(amigos) {
-    const ulLista = document.getElementById("lista");
+function mostrarListaDeAmigos(amigos) {
+    const Lista = document.getElementById("listaAmigos");
 
-    ulLista.innerHTML = ""; // Limpiar la lista antes de asignar
+    Lista.innerHTML = ""; // Limpiar la lista antes de mostrarla
 
     for (let i = 0; i < amigos.length; i++) {
         const li = document.createElement("li");
         li.textContent = amigos[i];
-
-        ulLista.appendChild(li);
+        Lista.appendChild(li);
     }
 }
 
