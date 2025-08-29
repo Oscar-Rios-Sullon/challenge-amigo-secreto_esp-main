@@ -1,6 +1,6 @@
 
 /* inicialización de variables */
-let amigos = [Ana, Beto, Carla, Diego, Elena];
+let amigos = ["Ana", "Beto", "Carla", "Diego", "Elena"];
 
 const inputNombre = document.getElementById("input-nombre");
 const btnAgregar = document.getElementById("btn-agregar");
@@ -9,8 +9,9 @@ const ulLista = document.getElementById("ul-lista");
 const divResultado = document.getElementById("div-resultado");
 
 /* función para agregar un amigo a la lista */
-btnAgregar.addEventListener("click", function() {
-    const nombre = inputNombre.value.trim();
+function agregarAmigo(nombre) {
+    const input = document.getElementById("amigo");
+    const nombre = input.value.trim();
     if (nombre === "") {
         alert("Por favor, ingresa un nombre válido.");
         return;
@@ -22,7 +23,7 @@ btnAgregar.addEventListener("click", function() {
     ulLista.appendChild(nuevoElemento);
 
     inputNombre.value = "";
-});
+}
 
 /* función para asignar amigos secretos */
 function asignarAmigosSecretos(amigos) {
