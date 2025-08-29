@@ -2,12 +2,6 @@
 /* inicialización de variables */
 let amigos = ["Ana", "Beto", "Carla", "Diego", "Elena"];
 
-const inputNombre = document.getElementById("input-nombre");
-const btnAgregar = document.getElementById("btn-agregar");
-const btnAsignar = document.getElementById("btn-asignar");
-const ulLista = document.getElementById("ul-lista");
-const divResultado = document.getElementById("div-resultado");
-
 /* función para agregar un amigo a la lista */
 function agregarAmigo(nombre) {
     const input = document.getElementById("amigo");
