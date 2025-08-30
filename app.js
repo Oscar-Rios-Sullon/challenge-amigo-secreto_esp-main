@@ -1,6 +1,6 @@
 
 /* inicialización de variables */
-let amigos = ["Ana", "Beto", "Carla", "Diego", "Elena"];
+let amigos = [];
 
 /* función para agregar un amigo a la lista */
 function agregarAmigo() {
